@@ -1,11 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Sockets</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CDN -->
+
     
-</body>
+    <title>Web Sockets</title>
+  </head>
+  <body>
+    <h1>Web Sockets!</h1>
+    <ul>
+      <li>111</li>
+      <li>222</li>
+      <li>333</li>
+    </ul>
+
+    <script>
+        const ws = new WebSocket('ws://localhost:8082');
+
+        ws.addEventListener("open", () => {
+            console.log('Connected from frontend');
+        });
+    </script>
+
+  </body>
 </html>
