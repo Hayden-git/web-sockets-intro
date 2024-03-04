@@ -23,7 +23,14 @@
 
         ws.addEventListener("open", () => {
             console.log('Connected from frontend');
+
+            ws.send('fsdndsgdosg');
         });
+
+        ws.addEventListener("message", ({ data }) => {
+            console.log('Message from frontend: ', data);
+        });
+        
     </script>
 
   </body>
